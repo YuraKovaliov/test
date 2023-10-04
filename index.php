@@ -1,71 +1,45 @@
 <?php
-$a = 7 ;
-$b = 7.15 ;
-$c = $a / $b ;
+$arr = [1, 2, 3, 7, 31, 4, 1, 8, 6];
+//var_dump($arr) ;
+echo count($arr);
+echo "<br>";
+echo $arr[4] + $arr[5] + $arr[6];
 
-var_dump(7 % 3) ; // 1. Отримати залишок від ділення 7 на 3
+$firstArr = [
 
-echo "<hr>" ;
-echo intdiv($a,$b);  //2.Отримати цілу частину ділення 7 и 7,15
-echo "<hr>" ;
+  'one' => 1,
 
-$num = 25 ;
-echo sqrt($num); //3.Отримати корінь из 25
-echo "<hr>";
+  'two' => 2,
 
-$d="Десять негритят пошли купаться в море";
-//echo strtok($d, 4);
+  'three' => 3,
 
-echo strstr($d,4); //4.Отримати 4-е слово з фрази - Десять негритят пошли купаться в море
-//if ($d === 'went') {
- // echo 'swimming';
-//}else{
- // echo 'swimming';
-//};
-  
-echo '<hr>';
+  'foure' => 5,
 
- //5.Отримати 17-й символ із фрази - Десять негритят пошли купаться в море
- echo mb_substr($d,16,1) ;
-echo '<hr>';
+  'five' => 12,
 
-var_dump($d); //7.Порахувати длину строки - Десять негритят пошли купаться в море
-echo '<hr>';
+];
 
-$h = "Ten little Indians went swimming in the sea";
-$h = ucwords($h);
-echo $h;
+$secondArr = [
 
- //6.Зробити великою кожну першу букву слів фрази - Десять негритят пошли купаться в море
-echo '<hr>';
+  'one' => 1,
 
-var_dump(1 === TRUE);//8.Чи вірно твердження true дорівнює 1
-echo '<hr>';
+  'seven' => 22,
 
-var_dump(0 == false); //9.Чи вірно твердження false тождественно 0
-echo '<hr>';
+  'three' => 32,
 
-$arr = array(
-1 => "true" ,
-2 => "folse",
-);
+  'foure' => 5,
 
-echo '<pre>';
-print_r($arr);
-echo '<pre>';
+  'five' => 13,
 
-$l= 125 * 13 +7 ;
-$j= 223 + 28 * 2 ;
-if($l > $j){
-   echo "l больше j";
-}elseif($l == $j){
-   echo "l равен j";
-}else{
-   echo "l меньше j";
-};
-echo "Привет мир";
+  'six' => 37,
 
-   
+];
+// $Difference = array_diff ($firstArr, $secondArr );
+// print_r($Difference);
+ $Difference = array_merge (array_diff ($secondArr, $firstArr), array_diff ($firstArr, $secondArr));
+ print_r($Difference);
+
+
 
 ?>
 
