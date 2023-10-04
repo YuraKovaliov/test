@@ -38,6 +38,7 @@ $secondArr = [
 // print_r($Difference);
  $Difference = array_merge (array_diff ($secondArr, $firstArr), array_diff ($firstArr, $secondArr));
  print_r($Difference);
+ 123
 
 
 
